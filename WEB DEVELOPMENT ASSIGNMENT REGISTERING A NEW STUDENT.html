@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>html form for registering a new student</title>
+    </head>
+    <body>
+        <h1>Student Registration Form</h1>
+    
+            <form action="submit_registration.php" method="post">
+            <label for="name">NAME:</label>
+            <input type="text" id="name" name="name" placeholder="Enter name" required><br><br>
+
+            <label for="date_of_birth">DATE OF BIRTH:</label>
+            <input type="date" id="date_of_birth" dob="date_of_birth" placeholder="Enter_DOB" required><br><br>
+
+            <fieldset>
+                <legend>GENDER:</legend>
+
+            
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="Male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="Female">Female</label>
+            <div>Please pick one option.</div>
+        </fieldset>
+        <fieldset>
+            <legend>ADDRESS:</legend>
+
+            <input type="text" id="address" address="address" placeholder="Enter Address" required>
+            <label for="address"></label>
+            <div>Please provide a valid address.</div>
+        </fieldset>
+        <fieldset>
+            <legend>TELEPHONE:</legend>
+            <input type="tel" id="telephone" telephone="telephone" placeholder="Enter Phone Number" required>
+            <div>Must contain atleast 10 numbers.</div>
+        </fieldset>
+        <fieldset>
+            <legend>EMAIL ADDRESS:</legend>
+            <input type="email" id="email_address" email address="email_address" placeholder="Enter Email Address" required>
+            <div id="email">Please provide a valid email address e.g example@gmail.com.</div>
+        </fieldset>
+        <fieldset>
+            <legend>COURSE:</legend>
+            <input type="radio" id="mechanical_engineering" name="course" value="Mechanical_Engineering" required>
+            <label for="course">Mechanical Engineering</label><br>
+
+            <input type="radio" id="software_engineering" name="course" value="Software_Engineering" required>
+            <label for="course">Software Engineering</label><br>
+
+            <input type="radio" id="computer_science" name="course" value="Computer_Science" required>
+            <label for="course">Computer Science</label><br>
+            <div>Please choose one option.</div>
+</fieldset><br>
+<button type="submit">Register</button>
+<button type="button" onclick="cancelRegistration()" >Cancel</button>
+        </form>
+        <script>
+            function cancelRegistration() {
+                alert("Registration canceled!");
+            }
+            </script>
+            
+    </body>
+</html>
